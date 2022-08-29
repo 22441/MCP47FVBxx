@@ -2,7 +2,7 @@
 this library can be used to control the output voltage of the MCP47FVBxx family of digital to analog converters,
 as well as managing communication with the device, made for arduino.
 
-created by Ali Akmal
+created by Ali Akmal 08.2022
 
 #Installation
 --------------------------------------------------------------------------------
