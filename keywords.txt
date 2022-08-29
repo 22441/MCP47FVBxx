@@ -1,0 +1,29 @@
+# -----------------------------------------
+# Syntax colouring for RsbLib demo library
+# -----------------------------------------
+
+# Datatypes (such as objects)
+MCP47FVBxx	KEYWORD1
+
+#Methods / functions
+generalCall 	KEYWORD2
+setPowerMode	KEYWORD2
+setVoltRef 	KEYWORD2
+setGainMode	KEYWORD2
+DACreset 	KEYWORD2
+setVout 	KEYWORD2
+readReg 	KEYWORD2
+DACwakeup 	KEYWORD2
+writeValue 	KEYWORD2
+bitMask1 	KEYWORD2
+bitMask0 	KEYWORD2
+checkBit 	KEYWORD2
+setSingleChannelGain 	KEYWORD2
+setSingleVrefMode 	KEYWORD2
+
+
+
+
+# Constants
+
+
