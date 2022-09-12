@@ -170,13 +170,13 @@ void MCP47FVBxx::setVoltRef(uint16_t Vmode)  // for General call reser and wakeu
 {
   if (channelCount == 8) {
     if (Vmode == VREF_BUFFERED) {
-      val = VREF_BUFFERED & WIPER_LOCK0;
+      val = VREF_BUFFERED | WIPER_LOCK0;
     }
     else if (Vmode == VREF_NON_BUFFERED) {
-      val = VREF_NON_BUFFERED & WIPER_LOCK1;
+      val = VREF_NON_BUFFERED | WIPER_LOCK1;
     }
     else if (Vmode == VREF_INTERNAL_BG) {
-      val = VREF_INTERNAL_BG & WIPER_LOCK2;
+      val = VREF_INTERNAL_BG | WIPER_LOCK2;
     }
     else if (Vmode == VREF_VDD) {
       val = VREF_VDD;
@@ -209,15 +209,15 @@ void MCP47FVBxx::setGainMode(uint8_t GMode)  // to set gain mode for all channel
   // otherwise depends on number of channels
   else if (GMode == 2) {
     if (channelCount == 4) {
-      val = GAIN_2X;
+      Gval = GAIN_2X;
     }
     else if (channelCount == 8) {
-      val = GAIN_2X_8CH;
+      Gval = GAIN_2X_8CH;
     }
-    else val = GAIN_2X;
+    else Gval = GAIN_2X;
   }
-  else val = GAIN_1X ;
-  error = writeValue(val, GAIN_STATUS_REG); // send to device
+  else Gval = GAIN_1X ;
+  error = writeValue(Gval, GAIN_STATUS_REG); // send to device
   if (error == 0) {
     ESP_LOGD(GAIN_STATUS_REG, "Gain setting frame successfully acknowledged");
   }
