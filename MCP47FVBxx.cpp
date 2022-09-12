@@ -202,7 +202,7 @@ void MCP47FVBxx::setVoltRef(uint16_t Vmode)  // for General call reser and wakeu
 
 void MCP47FVBxx::setGainMode(uint8_t GMode)  // to set gain mode for all channels
 {
-  uint8_t Gval; // temporary variable to store gain mode
+  uint16_t Gval; // temporary variable to store gain mode
   if (GMode == 1) {
     Gval = GAIN_1X; // gain is the same for both devices in this case.
   }
